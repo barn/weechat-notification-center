@@ -31,6 +31,11 @@ w.hook_print('', 'irc_privmsg', '', 1, 'notify', '')
 
 def notify(data, buffer, date, tags, displayed, highlight, prefix, message):
 
+        # ignore if it's yourself
+        own_nick = w.buffer_get_string(buffer, 'localvar_nick')
+        if prefix == own_nick or prefix == ('@%s' % own_nick):
+            return w.WEECHAT_RC_OK
+
         # Skip alerting if you're already looking at it and you're not /away
         if (buffer == w.current_buffer()
            and w.buffer_get_string(buffer, 'localvar_away') == ''):
