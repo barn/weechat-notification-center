@@ -4,14 +4,9 @@
 
 > [WeeChat](http://www.weechat.org) script to pass highlights and private messages to the OS X 10.8+ Notification Center.
 
+Forked from [sindresorhus/weechat-notification-center](https://github.com/sindresorhus/weechat-notification-center)
 
 ## Install
-
-### Script center
-
-- Install [pync](https://github.com/SeTeM/pync): `pip install pync`
-- In WeeChat, type `/script` to open the script manager
-- Find `notification_center` and type `i` then `Enter` to install
 
 ### Manually
 
@@ -21,4 +16,4 @@
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Ben Hughes](https://mumble.org.uk/)
